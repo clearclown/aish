@@ -1,20 +1,20 @@
 # GPT Command Executor
 
-このプロジェクトは、OpenAIのGPT-4を使用してユーザーのクエリに基づいたシェルコマンドを提案し、選択・実行するためのPythonスクリプトです。
+このプロジェクトは、**OpenAI**の**`GPT-4o-mini`**を使用してユーザーのクエリに基づいたシェルコマンドを提案し、選択・実行するためのPythonスクリプトです。
 
 ## 概要
 このスクリプトは、ユーザーからのクエリを受け取り、OpenAIのAPIを使用して適切なシェルコマンドを生成します。生成されたコマンドは`fzf`を使って選択され、ユーザーの確認のもと実行されます。
 
 ## 必要な前提条件
-- Python 3.x
+- Python 3.10
 - OpenAI APIキー
 - `fzf` (コマンドラインツール)
 
 ## インストール手順
 1. このリポジトリをクローンします。
     ```sh
-    git clone <リポジトリのURL>
-    cd <リポジトリ名>
+    git clone https://github.com/clearclown/aish.git
+    cd aish
     ```
 
 2. 必要なPythonライブラリをインストールします。
@@ -24,12 +24,12 @@
 
 3. `.env`ファイルを作成し、OpenAI APIキーを設定します。
     ```sh
-    echo "OPENAI_API_KEY=your_api_key_here" > .env
+    cp .env.example .env
     ```
 
 4. `fzf`をインストールします。
     ```sh
-    sudo apt-get install fzf
+    sudo apt-get install fzf -y
     ```
 
 ## 使用方法
